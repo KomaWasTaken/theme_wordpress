@@ -22,14 +22,35 @@
             <h1 class="blog-title">Exemple de thème WordPress</h1>
             <p class="lead blog-description">Création d’un thème WordPress à titre de tutoriel sur WP Pour Les Nuls.</p>
         </div>
+        <?php if (have_posts()): ?>
         <div class="row">
             <div class="col-sm-8 blog-main">
                 <div class="blog-post">
-                    <h2 class="blog-post-title">Un article de blog</h2>
-                    <p class="blog-post-meta">20 décembre 2017 par <a href="#">Louis-Philippe</a></p>
-                    <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                         
+
+                    <?php while( have_posts()): ?>
+
+                    <div class="home-articles">
+                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+                        <p><a href="<?php the_permalink(); ?>"> 
+                            <?php 
+                            the_title();                            
+                            the_post(); ?>
+                        
+                        </p>
+                    
+                    <?php
+                    endwhile;
+
+                    
+                    endif;
+
+                    ?>
                 </div>
             </div>
+            
+                    
+            
             <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
                 <div class="sidebar-module sidebar-module-inset">
                     <h4>À Propos</h4>
