@@ -1,7 +1,12 @@
 /*
-Theme Name: Sloop 3000
-Author: Valentin Gaillard && Romain Wenger
-Description: Template WordPress réalisé à l'ACS.
-Version: 0.0.1
-Tags: Bootstrap Blog 3000
+Theme Name: Kraken 3000
+Author: Romain.W && Valentin.G
+Description: Template WordPress réalisé à l'ACS
+Version: 1.0.0 
+Tags: bootstrap blog
+Text Domain: Kraken 3000
 */
+
+body{
+    background-color: #F8F8F8;
+}
