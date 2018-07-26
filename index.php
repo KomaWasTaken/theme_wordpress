@@ -11,12 +11,29 @@
 </head>
 <body>
 
+    <header class="header container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light col-12">
+            
+            
+<?php       wp_nav_menu( array(
+                    'theme_location'  => 'primary',
+                    'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                    'container'       => 'div',
+                    'container_class' => 'navbar-collapse',
+                    'container_id'    => 'navbarNav',
+                    'menu_class'      => 'd-flex list-unstyled offset-1',
+                    'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'          => new WP_Bootstrap_Navwalker(),
+                    
+                ) );
+?>
 
-    <div class="header">
-        <div class="container">
-            <?php wp_nav_menu(); ?>
+            
+            </nav>
         </div>
-    </div>
+    </header>
+
     <div class="container">
         <div class="blog-header">
             <h1 class="blog-title">Exemple de thème WordPress</h1>

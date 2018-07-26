@@ -10,7 +10,8 @@ function wpdocs_theme_name_scripts() {
     wp_enqueue_style('main-style', get_template_directory_uri()  .'/style.css', array("bootstrap-style") , version , 'all' );
 
     /* charge les scripts */
-    wp_enqueue_script('main-script', get_template_directory_uri()  .'/js/script.js', array('jquery') , version , true );
+    wp_enqueue_script('main-script', get_template_directory_uri()  .'/js/script.js', array('jquery','bootstrap-script') , version , true );
+    wp_enqueue_script('bootstrap-script', get_template_directory_uri()  .'/js/bootstrap.min.js', array() , version , true );
 
     }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
@@ -37,17 +38,21 @@ function theme_setup(){
 
     /* support du titre */
     add_theme_support( 'title-tag' );
+  
+    /* Appel la librairie bootstrap nav_walker */
+  require_once('includes/class-wp-bootstrap-navwalker.php');
 
     /* support du menu */
     register_nav_menus( array( 
-		'primary' => _x( 'Primary', 'nav menu location', 'toivo-lite' ),
-		'top'     => _x( 'Top', 'nav menu location', 'toivo-lite' ),
-		'social'  => _x( 'Social', 'nav menu location', 'toivo-lite' )
+		'primary' => _x( 'Primary', 'nav menu location', 'kraken3000' ),
+		'top'     => _x( 'Top', 'nav menu location', 'kraken3000' ),
+		'social'  => _x( 'Social', 'nav menu location', 'kraken3000' )
     ) );
     
     add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
-	) );
+    ) );
+
 }
 
 add_action('after_setup_theme', 'theme_setup');
