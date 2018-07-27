@@ -8,11 +8,11 @@ function wpdocs_theme_name_scripts() {
     /* charge les styles */
     wp_enqueue_style('bootstrap-style', get_template_directory_uri()  .'/css/bootstrap.min.css', array() , version , 'all');
     wp_enqueue_style('main-style', get_template_directory_uri()  .'/style.css', array("bootstrap-style") , version , 'all' );
+    
     /* charge les scripts */
     wp_enqueue_script('main-script', get_template_directory_uri()  .'/js/script.js', array('jquery','bootstrap-script', 'flip-js') , version , true );
     wp_enqueue_script('bootstrap-script', get_template_directory_uri()  .'/js/bootstrap.min.js', array() , version , true );
     wp_enqueue_script('flip-js', 'https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js', array(), version, true );
-
     }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 

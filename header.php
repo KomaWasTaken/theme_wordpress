@@ -30,8 +30,8 @@
             get_search_form();  
 ?> 
 
-                <div class="col-2  d-flex justify-content-center">
-                    <a href="connexion" class="btn btn-outline-secondary">CONNEXION</a>
+                <div id="formulaire-recherche" class="col-2  d-flex justify-content-center">
+                    <a href="wp-login/" class="btn btn-outline-secondary">CONNEXION</a>
                 </div>
             </nav>
         </div>

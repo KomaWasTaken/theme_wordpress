@@ -10,11 +10,13 @@
                 <div class="d-flex blog-post grid-container">
                          
 
-                    <?php while( have_posts()): the_post();
+<?php           while( have_posts()): the_post();
                     
-$id = get_post_thumbnail_id ($post->ID ); 
-$post_id = get_the_id();
-$my_thumb = wp_get_attachment_image_src($id, 'thumbnail'); ?>
+                    $id = get_post_thumbnail_id ($post->ID ); 
+                    $post_id = get_the_id();
+                    $my_thumb = wp_get_attachment_image_src($id, 'thumbnail'); 
+
+?>
 
                     <div class="col-3 home-articles h-400px text-center border-1 d-flex flex-column align-items-center card-grid" id="hover-articles">
                         <div class="front ">
