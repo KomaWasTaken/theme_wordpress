@@ -11,13 +11,9 @@ function wpdocs_theme_name_scripts() {
     /* charge les scripts */
     wp_enqueue_script('main-script', get_template_directory_uri()  .'/js/script.js', array('jquery','bootstrap-script', 'flip-js') , version , true );
     wp_enqueue_script('bootstrap-script', get_template_directory_uri()  .'/js/bootstrap.min.js', array() , version , true );
-<<<<<<< HEAD
-  }
-=======
     wp_enqueue_script('flip-js', 'https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js', array(), version, true );
 
     }
->>>>>>> 235372c508a3a65ba26e91174829f025bb7ca187
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
 
     
