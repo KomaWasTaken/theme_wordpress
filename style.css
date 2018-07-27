@@ -7,6 +7,10 @@ Tags: bootstrap blog
 Text Domain: Kraken 3000
 */
 
+html{
+    font-size:62.5%;
+}
+
 /*==========================================================================
                                IMPORT FONT
 ==========================================================================*/
@@ -33,9 +37,17 @@ Text Domain: Kraken 3000
                                CLASSE GENERIQUE
 ==========================================================================*/
 
-    /* Background color + color */
+    /* Background color + color + border color */
 
     .bg-color1{background-color: #343433;} /* Black Nav */
+
+    .color-1{color:#343433;}
+
+    .border-1{border:solid 1px #616161;}
+
+    /* Height + Width */
+
+    .h-400px{height:400px;}
 
     /* Margin && Padding */
 
@@ -52,6 +64,7 @@ Text Domain: Kraken 3000
 
     .fw-300{font-weight:300;}
 
+    .fs-16{font-size:1.6rem;}
     .fs-20{font-size: 20px;}
     .fs-35{font-size:35px;}
     .fs-50{font-size:50px;}
@@ -73,10 +86,23 @@ Text Domain: Kraken 3000
     }
 
     
-
     .btn-outline-secondary, .form-control{border-radius:0px;}
     .btn-outline-secondary:hover{
         color: #212121;
         background-color: #fff;
-        
     }
+
+    /* Box articles */
+
+    .img-thumbnail{
+        width:auto;
+        height:200px;
+    }
+
+    .box-color-1{background-color:#ff6b6b;}
+    .box-color-2{background-color:#616161;}
+    .box-color-3{background-color:#6cb2d1;}
+    .box-color-4{background-color:#c95cb0;}
+
+    .card-grid{margin: 0 15px;}
+    .front, .back{padding: 0 10px;}
