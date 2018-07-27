@@ -10,42 +10,99 @@ Text Domain: Kraken 3000
 html{
     font-size:62.5%;
 }
-.h-400px{
-    height:400px;
-}
-.img-thumbnail{
-    width:auto;
-    height:200px;
-}
 
-.box-color-1{
-    background-color:#ff6b6b;
-}
-.box-color-2{
-    background-color:#616161;
-}
-.box-color-3{
-    background-color:#6cb2d1;
-}
-.box-color-4{
-    background-color:#c95cb0;
-}
+/*==========================================================================
+                               IMPORT FONT
+==========================================================================*/
 
-.color-1{
-    color:#343433;
-}
+@font-face {
+    font-family: "coolvetica";
+    src: url("/font/coolvetica-rg.ttf") format("ttf"),
+           url("/font/coolvetica-rg.ttf") format("ttf");
+   }
 
-.border-1{
-    border:solid 1px #616161;
-}
+@font-face {
+    font-family: "helvetica";
+    src: url("/font/HELVETICA-NEUE1.OTF") format("OTF"),
+           url("/font/HELVETICA-NEUE1.OTF") format("OTF");
+   }
 
-.fs-16{
-    font-size:1.6rem;
-}
+@font-face {
+    font-family: "helveticabold";
+    src: url("/font/HELVETICA-NEUE2.OTF") format("OTF"),
+           url("/font/HELVETICA-NEUE2.OTF") format("OTF");
+   }
 
-.card-grid{
-    margin: 0 15px;
-}
-.front, .back{
-    padding: 0 10px;
-}
+/*==========================================================================
+                               CLASSE GENERIQUE
+==========================================================================*/
+
+    /* Background color + color + border color */
+
+    .bg-color1{background-color: #343433;} /* Black Nav */
+
+    .color-1{color:#343433;}
+
+    .border-1{border:solid 1px #616161;}
+
+    /* Height + Width */
+
+    .h-400px{height:400px;}
+
+    /* Margin && Padding */
+
+    .mtb-20{margin:20px 0;}
+    .mtb-20-10{margin:20px 0 10px;}
+
+    .ml-10{margin-left:10px;}
+
+    /* Font family + font size + font weight */
+
+    .helvetica-1{font-family: "helvetica", sans-serif;}
+    .helvetica-2{font-family: "helveticabold", sans-serif;}
+    .coolvetica{font-family: "coolvetica", sans-serif;}
+
+    .fw-300{font-weight:300;}
+
+    .fs-16{font-size:1.6rem;}
+    .fs-20{font-size: 20px;}
+    .fs-35{font-size:35px;}
+    .fs-50{font-size:50px;}
+
+    /* Générale*/
+
+    .op-7{opacity: 0.7;}
+
+/*==========================================================================
+                               CLASSE SPÉCIFIQUE
+==========================================================================*/
+
+    /* NAV */
+
+    a.nav-link{
+        color: #fff;
+        font-family: "coolvetica", sans-serif;
+        font-size: 20px;
+    }
+
+    
+    .btn-outline-secondary, .form-control{border-radius:0px;}
+    .btn-outline-secondary:hover{
+        color: #212121;
+        background-color: #fff;
+    }
+
+    /* Box articles */
+
+    .img-thumbnail{
+        width:auto;
+        height:200px;
+    }
+
+    .box-color-1{background-color:#ff6b6b;}
+    .box-color-2{background-color:#616161;}
+    .box-color-3{background-color:#6cb2d1;}
+    .box-color-4{background-color:#c95cb0;}
+
+    .card-grid{margin: 0 15px;}
+    .front, .back{padding: 0 10px;}

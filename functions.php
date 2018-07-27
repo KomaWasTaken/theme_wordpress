@@ -8,7 +8,6 @@ function wpdocs_theme_name_scripts() {
     /* charge les styles */
     wp_enqueue_style('bootstrap-style', get_template_directory_uri()  .'/css/bootstrap.min.css', array() , version , 'all');
     wp_enqueue_style('main-style', get_template_directory_uri()  .'/style.css', array("bootstrap-style") , version , 'all' );
-
     /* charge les scripts */
     wp_enqueue_script('main-script', get_template_directory_uri()  .'/js/script.js', array('jquery','bootstrap-script', 'flip-js') , version , true );
     wp_enqueue_script('bootstrap-script', get_template_directory_uri()  .'/js/bootstrap.min.js', array() , version , true );
@@ -26,6 +25,7 @@ add_action('admin_init', 'admin_scripts');
 
 
 
+/* Init */
 function theme_setup(){
 
     /* support des vignettes */
@@ -41,7 +41,7 @@ function theme_setup(){
     add_theme_support( 'title-tag' );
   
     /* Appel la librairie bootstrap nav_walker */
-  require_once('includes/class-wp-bootstrap-navwalker.php');
+    require_once('includes/class-wp-bootstrap-navwalker.php');
 
     /* support du menu */
     register_nav_menus( array( 
@@ -53,7 +53,6 @@ function theme_setup(){
     add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
     ) );
-
 }
 
 add_action('after_setup_theme', 'theme_setup');
