@@ -54,9 +54,7 @@ $my_thumb = wp_get_attachment_image_src($id, 'thumbnail'); ?>
             <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
                 <div class="sidebar-module sidebar-module-inset">
                     Article le plus populaire :
-                    <?php if (have_posts()): the_post()?>
-                   <?php wpb_set_post_views(get_the_ID()); ?>
-                <?php endif; ?>
+                    
                 </div>
             </div>
         </div>
